@@ -5,3 +5,11 @@
 # - sharing a project with others and want to avoid cluttering Git history
 # - working with build tools or editors that create extra files
 
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# VS Code local settings
+.vscode/
