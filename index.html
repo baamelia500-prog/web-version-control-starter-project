@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +18,20 @@
     <link rel="stylesheet" href="style.css" />
     </head>
 -->
+<body>
+
+  <!-- Navbar gets added here -->
+  <div id="nav-placeholder"></div>
+  <!-- Here is where your div container(s) will go with your web page content-->
+
+  <script>
+    // Load only the #site-nav element
+    $("#nav-placeholder").load("navbar.html #site-nav");
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+</body>
 
   <body>
 
