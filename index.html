@@ -1,34 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<body>
+
+    <!-- Navigation menu -->
+    <div id="nav-placeholder"></div>
+    <div class="container mt-4">
+
+<div class="row">
 
 <head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Using bootstrap 5 framework-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Art Programs</title>
+
+    <!-- Bootstrap stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- My stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <!-- Navbar gets added here -->
-  <div id="nav-placeholder"></div>
-  <!-- Here is where your div container(s) will go with your web page content-->
+    <!-- MediBang -->
+    <div class="col-md-6">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNH0nDJfsIkQIbrpJpdbvzMpUDGnnwwoqwsXsUaklO4A&s"
+            class="img-thumbnail"
+            alt="MediBang Paint">
 
-  <script>
-    // Load only the #site-nav element
+        <h3>MediBang Paint</h3>
+
+        <p>
+            MediBang Paint is a free art program that can be used
+            for drawing, painting, and comics.
+        </p>
+
+        <a href="https://medibangpaint.com/en/">
+            MediBang Website
+        </a>
+    </div>
+
+
+    <!-- Clip Studio Paint -->
+    <div class="col-md-6">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRtobazRr-o6zW7gZt3Jxpxi6Ln56p0lI0IjtgNB5xQ&s=10"
+            class="img-thumbnail"
+            alt="Clip Studio Paint">
+
+        <h3>Clip Studio Paint</h3>
+
+        <p>
+            Clip Studio Paint is a paid art program used for
+            drawing, comics, illustrations, and animation.
+        </p>
+
+        <a href="https://www.clipstudio.net/en/">
+            Clip Studio Website
+        </a>
+    </div>
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+    // Load the navbar from navbar.html
     $("#nav-placeholder").load("navbar.html #site-nav");
-  </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-  </script>
+</script>
+
 </body>
-
-  <body>
-  <div class="container">  
-    <h1>Hello, GitHub! My name is Amelia!</h1>
-    <p>This is my first web page using version control with Git and GitHub.</p>
-    <p>I am learning to edit and version websites using VS Code, Git, and GitHub.</p>
-  </div>
-  </body>
-
 </html>
+</div>
+</body>
