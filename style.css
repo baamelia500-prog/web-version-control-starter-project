@@ -1,8 +1,8 @@
 body {
   font-family: sans-serif;
   padding: 2rem;
-  background-color: powderblue;
-  color: #333;
+  background-color: rgb(245, 194, 224);
+  color: #300111;
 
   /* Navigation link animation */
 .nav-hover {
