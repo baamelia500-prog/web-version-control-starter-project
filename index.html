@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- Navigation menu -->
-    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #934c61;">
-        <div class="container">
-    
-            <a class="navbar-brand" href="navbar.html">Home</a>
-    
-            <div class="navbar-nav">
-                <a class="nav-link" href="index.html">Art Programs</a>
-                <a class="nav-link" href="about.html">Programs</a>
-            </div>
-        </div>
-    </nav>
-
 <head>
-    <div class="container mt-4">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Digital Art Programs</title>
+    <title>Home &middot; Art Programs</title>
 
     <!-- Bootstrap stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -30,44 +16,48 @@
 </head>
 
 <body>
-    
-    <!-- MediBang -->
-    <div class="col-md-6">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNH0nDJfsIkQIbrpJpdbvzMpUDGnnwwoqwsXsUaklO4A&s"
-            class="img-thumbnail"
-            alt="MediBang Paint">
 
-        <h3>MediBang Paint</h3>
+    <!-- The shared menu is loaded here from nav.html. Do not paste the menu in. -->
+    <div id="site-nav"></div>
 
-        <p>
-            MediBang Paint is a free art program that can be used
-            for drawing, painting, and comics.
-        </p>
+    <main class="container">
 
-        <a href="https://medibangpaint.com/en/">
-            MediBang Website
-        </a>
-    </div>
+        <section class="hero">
+            <h1>Digital art programs, compared</h1>
+            <p class="lead">
+                A short guide to the drawing programs artists actually use, so you can
+                pick one without downloading all of them first.
+            </p>
+        </section>
 
+        <section class="prose">
+            <h2>Start here</h2>
+            <p>
+                Digital art programs give artists tools to draw, paint, and create artwork
+                on a computer. They all do the same basic job. The differences show up in
+                price, in how much they can do, and in how long they take to learn.
+            </p>
+            <p>
+                Go to the <a href="programs.html">Programs</a> page for the free and paid
+                options side by side. Read <a href="about.html">About</a> to see why this
+                comparison is worth making.
+            </p>
+        </section>
 
-    <!-- Clip Studio Paint -->
-    <div class="col-md-6">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRtobazRr-o6zW7gZt3Jxpxi6Ln56p0lI0IjtgNB5xQ&s=10"
-            class="img-thumbnail"
-            alt="Clip Studio Paint">
+    </main>
 
-        <h3>Clip Studio Paint</h3>
+    <footer class="site-footer">
+        <div class="container">
+            <p>Built for a version control class, using Git and GitHub.</p>
+        </div>
+    </footer>
 
-        <p>
-            Clip Studio Paint is a paid art program used for
-            drawing, comics, illustrations, and animation.
-        </p>
+    <!-- Bootstrap JavaScript. This makes the mobile menu button open and close. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
-        <a href="https://www.clipstudio.net/en/">
-            Clip Studio Website
-        </a>
-    </div>
-</div>
-
+    <!-- Loads the shared menu -->
+    <script src="js/include.js"></script>
 </body>
+
 </html>
