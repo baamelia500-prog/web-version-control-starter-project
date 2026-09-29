@@ -1,5 +1,6 @@
 #.gitignore file tells Git which files and folders to ignore (not track).
-# This is useful for keeping log files, temporary files, build artifacts, or personal files out of your repository.
+# This is useful for keeping log files, temporary files, build artifacts,
+# or personal files out of your repository.
 # Use when
 # - you want to keep sensitive, local, or unnecessary files out of your repository
 # - sharing a project with others and want to avoid cluttering Git history
@@ -11,5 +12,8 @@
 # Windows system files
 Thumbs.db
 
-# VS Code local settings
-.vscode/
+# VS Code: ignore personal settings, but SHARE the extension list.
+# Note: ".vscode/" alone cannot be un-ignored file by file. Git never looks
+# inside an ignored folder, so the pattern must be ".vscode/*".
+.vscode/*
+!.vscode/extensions.json

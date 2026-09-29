@@ -42,6 +42,16 @@ Open `style.css`. Every color is a variable in the `:root` block at the top:
 
 Change a value once and the whole site follows.
 
+## First-time setup after cloning
+
+Open the folder in VS Code. It asks whether to install the recommended
+extensions. Say yes.
+
+The list lives in `.vscode/extensions.json`. To see it again later, open the
+Extensions panel and filter by `@recommended`.
+
+**Live Server is the one you cannot skip.** The rest are conveniences.
+
 ## How to preview it on your computer
 
 `js/include.js` uses `fetch()`, which needs a web server. Opening the `.html` file
