@@ -242,33 +242,66 @@ body.default-theme {
 
 /* Light theme */
 body.light-theme {
-  background-color: #f8e9ee;
-  color: #110006;
+  --bs-body-bg: #f8e9ee;
+  --bs-body-color: #110006;
   --muted-text: #6b3a51;
+  --accent: #c46490;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
 /* Dark theme */
 body.dark-theme {
-  background-color: #22040e;
-  color: #f8e9ee;
+  --bs-body-bg: #22040e;
+  --bs-body-color: #f8e9ee;
   --muted-text: #c28ea6;
   --accent: #c46490;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
 /* High contrast */
 body.high-contrast {
-  background-color: #000000;
-  color: #ffffff;
+  --bs-body-bg: #000000;
+  --bs-body-color: #ffffff;
   --muted-text: #ce9cb3;
   --accent: #c46490;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
-body.high-contrast a {
-  color: #ffff00;
-}
+body.high-contrast a { color: #ffff00; }
 
 body.high-contrast .card {
   background-color: #000000;
   color: #ffffff;
   border: 2px solid #ffffff;
+}
+
+/* Dropdown menu colors per theme */
+body.light-theme .dropdown-menu {
+  --bs-dropdown-bg: #f8e9ee;
+  --bs-dropdown-color: #110006;
+  --bs-dropdown-link-color: #110006;
+  --bs-dropdown-link-hover-bg: #c46490;
+  --bs-dropdown-link-hover-color: #ffffff;
+  --bs-dropdown-border-color: #c46490;
+}
+
+body.dark-theme .dropdown-menu {
+  --bs-dropdown-bg: #22040e;
+  --bs-dropdown-color: #f8e9ee;
+  --bs-dropdown-link-color: #f8e9ee;
+  --bs-dropdown-link-hover-bg: #c46490;
+  --bs-dropdown-link-hover-color: #ffffff;
+  --bs-dropdown-border-color: #c46490;
+}
+
+body.high-contrast .dropdown-menu {
+  --bs-dropdown-bg: #000000;
+  --bs-dropdown-color: #ffffff;
+  --bs-dropdown-link-color: #ffff00;
+  --bs-dropdown-link-hover-bg: #ffffff;
+  --bs-dropdown-link-hover-color: #000000;
+  --bs-dropdown-border-color: #ffffff;
 }
