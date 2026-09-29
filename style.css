@@ -232,6 +232,17 @@ a:focus {
     margin: 0;
 }
 
+#menu1 {
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-color: #ffffff;
+  --bs-btn-hover-bg: var(--accent-hover);
+  --bs-btn-hover-border-color: var(--accent-hover);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-active-bg: var(--accent-hover);
+  --bs-btn-active-border-color: var(--accent-hover);
+  --bs-btn-active-color: #ffffff;
+}
 
 /* Default Theme */
 body.default-theme {
