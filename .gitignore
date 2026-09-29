@@ -12,8 +12,9 @@
 # Windows system files
 Thumbs.db
 
-# VS Code: ignore personal settings, but SHARE the extension list.
+# VS Code: share the two files a teammate needs, ignore everything else.
 # Note: ".vscode/" alone cannot be un-ignored file by file. Git never looks
 # inside an ignored folder, so the pattern must be ".vscode/*".
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json

@@ -52,6 +52,16 @@ Extensions panel and filter by `@recommended`.
 
 **Live Server is the one you cannot skip.** The rest are conveniences.
 
+Two more shared files come with the repo:
+
+| File | What it does |
+| --- | --- |
+| `.vscode/settings.json` | Paints this window purple, and draws the 100 column ruler |
+| `cspell.json` | Project words such as `MediBang` and `Krita`, so the spell checker stays quiet |
+
+Your own `launch.json` and any other `.vscode` file stay private. Only these
+two are tracked.
+
 ## How to preview it on your computer
 
 `js/include.js` uses `fetch()`, which needs a web server. Opening the `.html` file
