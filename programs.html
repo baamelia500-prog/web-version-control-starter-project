@@ -17,16 +17,13 @@
 
 <body>
 
-    <!-- The shared menu is loaded here from nav.html. Do not paste the menu in. -->
+    <!-- The shared menu is loaded here from nav.html. -->
     <div id="site-nav"></div>
 
     <main class="container">
 
         <section class="hero">
             <h1>Art programs</h1>
-            <p class="lead">
-                Free programs first, then paid ones. Two of them get a closer look below.
-            </p>
         </section>
 
         <section class="prose">
@@ -46,53 +43,86 @@
 
         <h2>A closer look</h2>
 
-        <div class="row g-4">
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
-            <!-- MediBang -->
-            <div class="col-md-6">
-                <article class="program-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNH0nDJfsIkQIbrpJpdbvzMpUDGnnwwoqwsXsUaklO4A&s"
-                        alt="MediBang Paint logo">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0"
+            class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
 
-                    <span class="price-tag">Free</span>
-                    <h3>MediBang Paint</h3>
+    <!-- Slides -->
+    <div class="carousel-inner">
 
-                    <p>
-                        MediBang Paint is a free art program that can be used for drawing,
-                        painting, and comics.
-                    </p>
-
-                    <a href="https://medibangpaint.com/en/">Visit the MediBang website</a>
-                </article>
+        <!-- MediBang -->
+        <div class="carousel-item active">
+            <div class="caption">
+                <h4>MediBang Paint</h4>
+                <p>
+                    MediBang Paint is a free art program that can be used for drawing,
+                    painting, and comics.
+                </p>
+                <a href="https://medibangpaint.com/en/">Visit the MediBang website</a>
             </div>
 
-            <!-- Clip Studio Paint -->
-            <div class="col-md-6">
-                <article class="program-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRtobazRr-o6zW7gZt3Jxpxi6Ln56p0lI0IjtgNB5xQ&s=10"
-                        alt="Clip Studio Paint logo">
-
-                    <span class="price-tag">Paid</span>
-                    <h3>Clip Studio Paint</h3>
-
-                    <p>
-                        Clip Studio Paint is a paid art program used for drawing, comics,
-                        illustrations, and animation.
-                    </p>
-
-                    <a href="https://www.clipstudio.net/en/">Visit the Clip Studio website</a>
-                </article>
-            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNH0nDJfsIkQIbrpJpdbvzMpUDGnnwwoqwsXsUaklO4A&s"
+                class="d-block w-100" alt="MediBang Paint logo" style="width:100%;">
 
         </div>
 
-    </main>
+        <!-- Clip Studio Paint -->
+        <div class="carousel-item">
+            <div class="caption">
+                <h4>Clip Studio Paint</h4>
+                <p>
+                    Clip Studio Paint is a paid art program used for drawing, comics,
+                    illustrations, and animation.
+                </p>
+                <a href="https://www.clipstudio.net/en/">Visit the Clip Studio website</a>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRtobazRr-o6zW7gZt3Jxpxi6Ln56p0lI0IjtgNB5xQ&s=10"
+                class="d-block w-100" alt="Clip Studio Paint logo" style="width:100%;">
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>Built for a version control class, using Git and GitHub.</p>
         </div>
-    </footer>
+
+        <!-- Photoshop -->
+        <div class="carousel-item">
+            <div class="caption">
+                <h4>Photoshop</h4>
+                <p>
+                    Photoshop is a paid art program used mainly for illustrating, enhancing,
+                    and editing.
+                </p>
+                <a href="https://www.adobe.com/products/photoshop/online.html">Visit the Photoshop website</a>
+            </div>
+
+            <img src="https://1000logos.net/wp-content/uploads/2023/04/Photoshop-logo.png"
+                class="d-block w-100" alt="Photoshop logo" style="width:100%;">
+
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button"
+        data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button"
+        data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+</div>
+
+</main>
+
 
     <!-- Bootstrap JavaScript. This makes the mobile menu button open and close. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">

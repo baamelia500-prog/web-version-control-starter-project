@@ -210,17 +210,11 @@ a:focus {
     margin-bottom: var(--space-sm);
 }
 
-/* A small tag that shows the price: "Free" or "Paid". */
-.price-tag {
-    display: inline-block;
-    margin-bottom: var(--space-sm);
-    padding: 0.1rem 0.6rem;
-    background-color: var(--page-bg);
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+.carousel-item img {
+  width: 100%;
+  height: 400px;          /* pick whatever height you like */
+  object-fit: contain;    /* shows the whole logo, no cropping */
+  background: #222;       /* fills the empty space around smaller logos */
 }
 
 /* ---------------------------------------------------------------------------
@@ -236,4 +230,39 @@ a:focus {
 
 .site-footer p {
     margin: 0;
+}
+
+
+/* Default Theme */
+body.default-theme {
+  background-color: rgb(245, 194, 211);
+  color: #300111;
+}
+
+/* Light theme */
+body.light-theme {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* Dark theme */
+body.dark-theme {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+/* High contrast */
+body.high-contrast {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.high-contrast a {
+  color: #ffff00;
+}
+
+body.high-contrast .card {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
