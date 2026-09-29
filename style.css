@@ -235,20 +235,20 @@ a:focus {
 
 /* Default Theme */
 body.default-theme {
-  background-color: rgb(245, 194, 211);
+  background-color: #f5c2d3;
   color: #300111;
 }
 
 /* Light theme */
 body.light-theme {
-  background-color: #ffffff;
-  color: #212529;
+  background-color: #f8e9ee;
+  color: #110006;
 }
 
 /* Dark theme */
 body.dark-theme {
-  background-color: #212529;
-  color: #ffffff;
+  background-color: #22040e;
+  color: #f8e9ee;
 }
 
 /* High contrast */
