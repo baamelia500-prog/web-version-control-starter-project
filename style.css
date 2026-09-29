@@ -237,24 +237,30 @@ a:focus {
 body.default-theme {
   background-color: #f5c2d3;
   color: #300111;
+  --muted-text: #6b3a51;
 }
 
 /* Light theme */
 body.light-theme {
   background-color: #f8e9ee;
   color: #110006;
+  --muted-text: #6b3a51;
 }
 
 /* Dark theme */
 body.dark-theme {
   background-color: #22040e;
   color: #f8e9ee;
+  --muted-text: #c28ea6;
+  --accent: #c46490;
 }
 
 /* High contrast */
 body.high-contrast {
   background-color: #000000;
   color: #ffffff;
+  --muted-text: #ce9cb3;
+  --accent: #c46490;
 }
 
 body.high-contrast a {
