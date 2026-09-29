@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "language": "en-US",
+  "//": [
+    "cspell reads THIS file. It never reads .vscode/settings.json, so",
+    "project words must live here to work on the command line as well",
+    "as in the editor."
+  ],
+  "words": [
+    "Amelia",
+    "baamelia",
+    "clipstudio",
+    "cspell",
+    "GIMP",
+    "gstatic",
+    "jsdelivr",
+    "Krita",
+    "MediBang",
+    "medibangpaint",
+    "navbar",
+    "Peacock"
+  ],
+  "ignorePaths": [
+    ".git/**",
+    "node_modules/**"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  // Shared workspace settings. Peacock owns the color block below: it paints
+  // this project's VS Code window purple so it is easy to tell apart from
+  // other open windows.
+  //
+  // The 100 character limit is NOT declared here. .editorconfig is the single
+  // source for it. The ruler below only draws the line in the same place the
+  // warning fires.
+  "editor.rulers": [100],
+  "editor.wordWrapColumn": 100,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#62027b",
+    "activityBar.activeBorder": "#e7e7e7",
+    "activityBar.background": "#62027b",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#7d6402",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "activityBarTop.activeBackground": "#62027b",
+    "activityBarTop.activeBorder": "#e7e7e7",
+    "activityBarTop.background": "#62027b",
+    "activityBarTop.foreground": "#e7e7e7",
+    "activityBarTop.inactiveForeground": "#e7e7e799",
+    "commandCenter.border": "#e7e7e799",
+    "commandCenter.foreground": "#e7e7e7",
+    "sash.hoverBorder": "#62027b",
+    "statusBar.background": "#3a0149",
+    "statusBar.debuggingBackground": "#3a0149",
+    "statusBar.debuggingForeground": "#e7e7e7",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#62027b",
+    "statusBarItem.remoteBackground": "#7e6402",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#3a0149",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#3a014999",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.inactiveBackground": "#3a0149"
+  },
+  "peacock.color": "#3a0149"
+}
