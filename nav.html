@@ -29,31 +29,29 @@
         </div>
 
         <!-- Appearance dropdown -->
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="appearanceDropdown"
-            data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Appearance
-        </button>
-
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="appearanceDropdown">
-            <li>
-                <button class="dropdown-item" type="button" onclick="setTheme('light')">Light</button>
-            </li>
-            <li>
-                <button class="dropdown-item" type="button" onclick="setTheme('dark')">Dark</button>
-            </li>
-            <li>
-                <button class="dropdown-item" type="button" onclick="setTheme('contrast')">High Contrast</button>
-            </li>
-            <li><hr class="dropdown-divider"></li>
-            <li>
-                <button class="dropdown-item" type="button" onclick="setTheme('default')">Reset</button>
-            </li>
-        </ul>
-    </div>
+        <div class="container">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="menu1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Appearance
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation">
+                        <button class="dropdown-item" role="menuitem" tabindex="-1" type="button" onclick="setTheme('light')">Light</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="dropdown-item" role="menuitem" tabindex="-1" type="button" onclick="setTheme('dark')">Dark</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="dropdown-item" role="menuitem" tabindex="-1" type="button" onclick="setTheme('contrast')">High Contrast</button>
+                    </li>
+                    <li role="presentation"><hr class="dropdown-divider"></li>
+                    <li role="presentation">
+                    <button class="dropdown-item" role="menuitem" tabindex="-1" type="button" onclick="setTheme('default')">Reset</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
     </div>
 </nav>
