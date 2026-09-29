@@ -1,0 +1,47 @@
+{
+  // Extensions VS Code offers to a person who clones this repo.
+  // VS Code shows a "Do you want to install the recommended extensions?"
+  // prompt the first time the folder opens.
+  //
+  // This list is deliberately short. It holds what THIS project needs,
+  // not every extension on the author's machine.
+  "recommendations": [
+    // REQUIRED. js/include.js uses fetch() to load nav.html, and fetch()
+    // needs a web server. Opening the .html file straight from the folder
+    // shows the page with no menu. Right-click index.html and choose
+    // "Open with Live Server".
+    "ritwickdey.LiveServer",
+
+    // Applies .editorconfig: 4-space indent, LF endings, 100 character
+    // lines. Without this, every editor picks its own settings and the
+    // diffs fill up with whitespace changes.
+    "editorconfig.editorconfig",
+
+    // Owns the "peacock.color" setting in .vscode/settings.json, which
+    // paints this project's window purple. The window colors still apply
+    // without it, but you cannot change them from the command palette.
+    "johnpapa.vscode-peacock",
+
+    // Autocompletes Bootstrap class names such as "navbar-expand-sm"
+    // inside class="" attributes.
+    "anderseandersen.html-class-suggestions",
+
+    // Spell checks the page text, comments, and ReadMe.md.
+    // Project words live in cspell.json, not in settings.json, because the
+    // cspell command line tool never reads settings.json.
+    "streetsidesoftware.code-spell-checker",
+
+    // Draws the branch and merge history as a graph. This repo is a
+    // version control exercise, so seeing the shape of the history helps.
+    "mhutchie.git-graph",
+
+    // Shows who changed a line and when, from inside the editor.
+    "donjayamanne.githistory",
+
+    // Preview, table of contents, and shortcuts for ReadMe.md.
+    "yzhang.markdown-all-in-one"
+  ],
+
+  // Extensions VS Code should NOT suggest for this folder.
+  "unwantedRecommendations": []
+}
