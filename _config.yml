@@ -1,0 +1,17 @@
+# Jekyll builds this site. GitHub Pages runs Jekyll for you, so pushing to
+# main is all that is needed to publish.
+title: Art Programs
+description: A short guide to the digital art programs artists actually use.
+
+# Keep a trailing ".html" on built pages, so links such as "about.html" keep
+# working and match what the files are called.
+permalink: /:basename.html
+
+# Files that are project tooling, not part of the website.
+exclude:
+  - ReadMe.md
+  - Gemfile
+  - Gemfile.lock
+  - cspell.json
+  - .editorconfig
+  - .vscode

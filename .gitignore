@@ -18,3 +18,10 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+
+# Jekyll build output and cache. Both are generated, so they are never
+# committed. GitHub Pages builds the site on its own servers.
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock

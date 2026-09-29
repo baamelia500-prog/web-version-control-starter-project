@@ -6,18 +6,12 @@
   // This list is deliberately short. It holds what THIS project needs,
   // not every extension on the author's machine.
   "recommendations": [
-    // Serves the folder over http so you can preview a page the way a
-    // browser really loads it. Right-click index.html and choose
-    // "Open with Live Server".
-    //
-    // Note: once this branch builds pages with Jekyll, Live Server will show
-    // the raw "{% include %}" tags instead of the menu.
-    // Preview the built site with "bundle exec jekyll serve" and open
-    // http://localhost:4000 in its place.
-    "ritwickdey.LiveServer",
-
     // Highlights the Liquid tags Jekyll uses, such as "{% include nav.html %}"
     // and the front matter at the top of each page.
+    //
+    // Live Server is deliberately NOT recommended here. It serves the files
+    // as they sit on disk, so it shows the raw tag instead of the menu.
+    // Preview with "bundle exec jekyll serve" and open http://localhost:4000.
     "sissel.shopify-liquid",
 
     // Applies .editorconfig: 4-space indent, LF endings, 100 character

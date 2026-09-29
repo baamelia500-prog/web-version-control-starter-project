@@ -1,0 +1,35 @@
+{% comment %}
+  Shared navigation bar. This is the ONE copy.
+  Every page gets it through _layouts/default.html, which calls
+  {% include nav.html %}. The links themselves come from _data/nav.yml.
+{% endcomment %}
+<nav class="navbar navbar-expand-sm site-nav" data-bs-theme="dark"
+    aria-label="Main navigation">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">{{ site.title }}</a>
+
+        <!-- Mobile menu button -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#nav-links"
+                aria-controls="nav-links"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="nav-links">
+            <div class="navbar-nav ms-auto">
+                {% for item in site.data.nav %}
+                <a class="nav-link{% if page.slug == item.slug %} active{% endif %}"
+                    href="{{ item.url }}"{% if page.slug == item.slug %}
+                    aria-current="page"{% endif %}>{{ item.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</nav>

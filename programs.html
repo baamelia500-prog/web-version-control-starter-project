@@ -1,0 +1,42 @@
+---
+layout: default
+slug: programs
+title: Programs
+heading: Art programs
+lead: >-
+  Free programs first, then paid ones. Two of them get a closer look below.
+---
+
+<section class="prose">
+    <h2>Free programs</h2>
+    <ul>
+        <li>MediBang Paint</li>
+        <li>Krita</li>
+        <li>GIMP</li>
+    </ul>
+
+    <h2>Paid programs</h2>
+    <ul>
+        <li>Clip Studio Paint</li>
+        <li>Photoshop</li>
+    </ul>
+</section>
+
+<h2>A closer look</h2>
+
+<div class="row g-4">
+    {% for program in site.data.programs %}
+    <div class="col-md-6">
+        <article class="program-card">
+            <img src="{{ program.logo }}" alt="{{ program.name }} logo">
+
+            <span class="price-tag">{{ program.price }}</span>
+            <h3>{{ program.name }}</h3>
+
+            <p>{{ program.description }}</p>
+
+            <a href="{{ program.link }}">{{ program.link_text }}</a>
+        </article>
+    </div>
+    {% endfor %}
+</div>

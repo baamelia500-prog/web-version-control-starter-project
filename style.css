@@ -1,35 +1,239 @@
+/* ===========================================================================
+   Site theme.
+
+   Every color and size lives here in one block. Change a value once and the
+   whole site follows, the same way one paint can covers every wall.
+   =========================================================================== */
+
+:root {
+    /* Colors */
+    --page-bg: rgb(245, 194, 211);
+    --page-text: #300111;
+    --muted-text: #6b3a51;
+    --nav-bg: #934c61;
+    --nav-text: #fbeaf1;
+    --nav-text-active: #ffffff;
+    --card-bg: #fffafc;
+    --card-border: #e2a9c7;
+    --accent: #8c1f52;
+    --accent-hover: #5c0f34;
+
+    /* Layout */
+    --reading-width: 68ch;
+    --page-width: 1100px;
+    --space-sm: 0.75rem;
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
+    --radius: 10px;
+}
+
+/* ---------------------------------------------------------------------------
+   Page basics
+   --------------------------------------------------------------------------- */
+
 body {
-  font-family: sans-serif;
-  padding: 2rem;
-  background-color: rgb(245, 194, 211);
-  color: #300111;
-
-  /* Navigation link animation */
-.nav-hover {
-  position: relative;
-  transition: color 0.3s;
+    margin: 0;
+    background-color: var(--page-bg);
+    color: var(--page-text);
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
 }
 
-/* Change the text color when hovering */
-.nav-hover:hover {
-  color: white;
+/* Space between the major blocks of a page. */
+main {
+    padding-bottom: var(--space-lg);
 }
 
-/* Create the underline */
-.nav-hover::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.3s, left 0.3s;
+/* ---------------------------------------------------------------------------
+   Text: the part that makes it read like a website
+
+   Long lines are hard to follow, so body text is held to a narrow column.
+   Headings get room above them, which groups each heading with its own text.
+   --------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    text-wrap: balance;
 }
 
-/* Animate the underline when hovering */
-.nav-hover:hover::after {
-  width: 100%;
-  left: 0;
+h1 {
+    margin: 0 0 var(--space-md);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
+
+h2 {
+    margin: var(--space-lg) 0 var(--space-sm);
+    /* No extra gap when the heading already starts a new section. */
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--card-border);
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+}
+
+section > h2:first-child,
+main > h2:first-of-type {
+    margin-top: var(--space-md);
+}
+
+h3 {
+    margin: 0 0 var(--space-sm);
+    font-size: 1.25rem;
+}
+
+p {
+    margin: 0 0 var(--space-md);
+}
+
+/* A comfortable reading column. Put this class on text you want people to read
+   straight through. */
+.prose {
+    max-width: var(--reading-width);
+}
+
+/* The first paragraph after an h1 acts as a summary, so it is slightly larger. */
+.lead {
+    max-width: var(--reading-width);
+    color: var(--muted-text);
+    font-size: 1.2rem;
+}
+
+ul {
+    margin: 0 0 var(--space-md);
+    padding-left: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-hover);
+}
+
+/* ---------------------------------------------------------------------------
+   Hero: the welcome block at the top of the home page
+   --------------------------------------------------------------------------- */
+
+.hero {
+    padding: var(--space-lg) 0 var(--space-sm);
+}
+
+/* ---------------------------------------------------------------------------
+   Navigation bar
+   --------------------------------------------------------------------------- */
+
+.site-nav {
+    background-color: var(--nav-bg);
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+}
+
+.site-nav .navbar-brand {
+    color: var(--nav-text-active);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-nav .navbar-toggler {
+    border-color: var(--nav-text);
+}
+
+.site-nav .nav-link {
+    position: relative;
+    margin-right: var(--space-md);
+    padding: 0.25rem 0;
+    color: var(--nav-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus,
+.site-nav .nav-link.active {
+    color: var(--nav-text-active);
+}
+
+/* The underline starts as a dot in the middle, then grows outward on hover. */
+.site-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--nav-text-active);
+    transition: width 0.3s, left 0.3s;
+}
+
+.site-nav .nav-link:hover::after,
+.site-nav .nav-link:focus::after,
+.site-nav .nav-link.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Program cards
+   --------------------------------------------------------------------------- */
+
+.program-card {
+    height: 100%;
+    padding: var(--space-md);
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+}
+
+/* display:block puts the logo on its own line, above the price tag. */
+.program-card img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius);
+    object-fit: contain;
+    background-color: #ffffff;
+}
+
+.program-card p {
+    margin-bottom: var(--space-sm);
+}
+
+/* A small tag that shows the price: "Free" or "Paid". */
+.price-tag {
+    display: inline-block;
+    margin-bottom: var(--space-sm);
+    padding: 0.1rem 0.6rem;
+    background-color: var(--page-bg);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ---------------------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------------------- */
+
+.site-footer {
+    padding: var(--space-md) 0;
+    border-top: 1px solid var(--card-border);
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 0;
 }

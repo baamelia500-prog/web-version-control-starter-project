@@ -1,0 +1,16 @@
+# The menu, as data. Add a page here and it appears in the navigation bar on
+# every page at once. _includes/nav.html loops over this list.
+#
+# slug must match the "slug:" in that page's front matter. That is how the
+# current page gets marked as selected.
+- title: Home
+  url: index.html
+  slug: home
+
+- title: Programs
+  url: programs.html
+  slug: programs
+
+- title: About
+  url: about.html
+  slug: about

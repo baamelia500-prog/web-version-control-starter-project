@@ -1,0 +1,19 @@
+# The programs shown as cards on programs.html. Add one here and a new card
+# appears, with no HTML to copy.
+- name: MediBang Paint
+  price: Free
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNH0nDJfsIkQIbrpJpdbvzMpUDGnnwwoqwsXsUaklO4A&s
+  description: >-
+    MediBang Paint is a free art program that can be used for drawing,
+    painting, and comics.
+  link: https://medibangpaint.com/en/
+  link_text: Visit the MediBang website
+
+- name: Clip Studio Paint
+  price: Paid
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRtobazRr-o6zW7gZt3Jxpxi6Ln56p0lI0IjtgNB5xQ&s=10
+  description: >-
+    Clip Studio Paint is a paid art program used for drawing, comics,
+    illustrations, and animation.
+  link: https://www.clipstudio.net/en/
+  link_text: Visit the Clip Studio website
