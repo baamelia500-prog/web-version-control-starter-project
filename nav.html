@@ -29,39 +29,31 @@
         </div>
 
         <!-- Appearance dropdown -->
-        <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"
-            href="#"
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle"
+            type="button"
             id="appearanceDropdown"
-            role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false">
             Appearance
-            </a>
+        </button>
 
-            <ul class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="appearanceDropdown"></ul>
-
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="appearanceDropdown">
             <li>
-                <button class="dropdown-item" onclick="setTheme('1Light')">
-                </button>
+                <button class="dropdown-item" type="button" onclick="setTheme('light')">Light</button>
             </li>
-
             <li>
-                <button class="dropdown-item" onclick="setTheme('dark')"> Dark
-                </button>
+                <button class="dropdown-item" type="button" onclick="setTheme('dark')">Dark</button>
             </li>
-
             <li>
-                <button class="dropdown-item" onclick="setTheme('contrast')"> High Contrast
-                </button>
+                <button class="dropdown-item" type="button" onclick="setTheme('contrast')">High Contrast</button>
             </li>
-
+            <li><hr class="dropdown-divider"></li>
             <li>
-                <hr class="dropdown-divider"></li> <li> <button class="dropdown-item" onclick="setTheme('default')"> Reset
-                </button>
+                <button class="dropdown-item" type="button" onclick="setTheme('default')">Reset</button>
             </li>
+        </ul>
+    </div>
 
-        </div>
     </div>
 </nav>
