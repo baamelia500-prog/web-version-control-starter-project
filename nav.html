@@ -28,5 +28,40 @@
             </div>
         </div>
 
+        <!-- Appearance dropdown -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+            href="#"
+            id="appearanceDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Appearance
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="appearanceDropdown"></ul>
+
+            <li>
+                <button class="dropdown-item" onclick="setTheme('1Light')">
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="setTheme('dark')"> Dark
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="setTheme('contrast')"> High Contrast
+                </button>
+            </li>
+
+            <li>
+                <hr class="dropdown-divider"></li> <li> <button class="dropdown-item" onclick="setTheme('default')"> Reset
+                </button>
+            </li>
+
+        </div>
     </div>
 </nav>
