@@ -1,47 +1,32 @@
-/*
- * Loads the shared navigation bar into every page.
- *
- * Think of nav.html as a stencil: this script traces it onto each page, so the
- * menu lives in one file instead of being copied into three.
- *
- * A page only needs two lines:
- *   <div id="site-nav"></div>
- *   <script src="js/include.js" defer></script>
- *
- * Note: fetch() needs a web server. On GitHub Pages this works automatically.
- * To preview on your own computer, use the VS Code "Live Server" extension.
- * Opening the file directly from disk (file://) shows no menu.
- */
+// Loads the navigation bar into the page
+// !! Put <div id="nav"></div> in each page where you want the menu
 
-/** Marks the link for the current page so it looks selected. */
-function markActiveLink(container) {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-    for (const link of container.querySelectorAll('.nav-link')) {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-            link.setAttribute('aria-current', 'page');
-        }
-    }
+function loadNav() {
+    fetch("nav.html")
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(data) {
+        document.getElementById("nav").innerHTML = data;
+        highlightLink();
+    });
 }
 
-/** Fetches nav.html and puts it inside #site-nav. */
-async function loadNav() {
-    const mount = document.querySelector('#site-nav');
-    if (!mount) {
-        return;
+  // Make the link for the current page look selected
+    function highlightLink() {
+    var page = window.location.pathname.split("/").pop();
+
+    // if the address ends in "/" there is no file name, so use index.html
+    if (page == "") {
+    page = "index.html";
     }
 
-    try {
-        const response = await fetch('nav.html');
-        if (!response.ok) {
-            throw new Error(`nav.html returned status ${response.status}`);
-        }
+    var links = document.getElementsByClassName("nav-link");
 
-        mount.innerHTML = await response.text();
-        markActiveLink(mount);
-    } catch (error) {
-        console.error('[site] Could not load nav.html. Are you using a web server?', error);
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].getAttribute("href") == page) {
+        links[i].className = links[i].className + " active";
+        }
     }
 }
 
